@@ -1,0 +1,35 @@
+.banner-img{ background: url(../images/aboutGroup/gyjt-banner.png) no-repeat;background-size: 100% 100%}
+.bdImgTxt{position: relative;top: -310px;text-align: left;}
+.container-fluid{padding: 0;margin-top: 60px;}
+.container-fluid .jumbotron{border-radius: 0;}
+.w1200{width: 1200px;margin: auto;}
+.blank{background: #fff;}
+.jumbotron{margin-bottom: 0!important;}
+/*关于容商天下*/
+.about-company{width: 100%;height: 690px;background:#fff url(../images/aboutGroup/byrstx-bg.png) no-repeat;}
+h3.big-tit{padding: 70px 0 70px;color: #3E3E3E;margin: 0;}
+.about-content{color: #3d3d3d;line-height:36px;}
+/*企业文化*/
+.company-culture{width: 100%;height: 1250px;background:#fff url(../images/aboutGroup/qywh_bg.png) no-repeat;}
+.culture-text{margin-left: 55px;margin-top: -40px;}
+.culture-text2{margin-left: 125px;margin-top: 80px;}
+.culture-second{margin-left: 150px;margin-right: 86px;}
+.culture-second2{margin-top: 80px;}
+
+/*工业互联网先行者*/
+.inter-pioneer{width: 100%;height: 720px;background:#fff url(../images/aboutGroup/gyhlw-bg.png) no-repeat;}
+.pioneer-text{display: inline-block;color: #303030;line-height: 40px;}
+.pioneer-img{margin-top: -40px;}
+
+@media(min-width:768px ) {
+	.jumbotron h1.bdImgTxt_first{font-size: 56px;color: #fff;margin-top: 125px;} 
+	.jumbotron p.bdImgTxt_sec{font-size: 26px;color: #ECF8FF;margin-top: 30px;}
+	.jumbotron{height: 480px;}
+	.banner-img{ background: url(../images/aboutGroup/gyjt-banner.png) no-repeat;background-size: 100% 100%}
+}
+@media (max-width:768px) { 
+	.container{width: 100%!important;}
+	.bigtit{width: 100%;}
+}
+
+

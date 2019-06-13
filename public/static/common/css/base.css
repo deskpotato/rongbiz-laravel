@@ -1,0 +1,506 @@
+@charset "utf-8"; 
+/*基本样式*/
+html,body{
+	font-size:15px;
+	font-family: '微软雅黑' !important;
+}
+
+.container{
+	width:1200px;
+	margin:0 auto;
+}
+.w1200{
+	width:1200px;
+}
+a,abbr,acronym,address,article,aside,audio,b,blockquote,big,body,canvas,caption,cite,code,datalist,dd,del,details,dfn,dl,div,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,meter,nav,menu,object,ol,output,p,pre,progress,q,samp,section,small,span,strike,strong,sub,sup,table,tbody,tfoot,thead,th,tr,tt,td,ul,var,p{
+	margin:0; 
+    padding:0;
+}
+table{ 
+	border-collapse:collapse;
+	border-spacing:0;
+} 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.lheight{line-height: 36px;}
+a{
+	outline: none!important;
+	text-decoration: none!important;
+	color: #333;
+}
+a:hover{
+	text-decoration: none!important;
+}
+a:visited{
+	text-decoration: none!important;
+}
+
+a:active{
+	
+	text-decoration: none!important;
+}
+ul,ul li,li{
+	list-style:none;
+	list-style-type:none;
+}
+
+.ellipsis {/*文本限制显示*/
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	outline: none;
+} 
+input,button,textarea,select{*font-size:100%;}  
+textarea { resize:none;}  
+i, em, strong { font-style:normal;}
+/*字体、字号、颜色*/
+textarea{
+	overflow-x: hidden;
+}
+.p0{padding: 0;}
+.f38{
+	font-size:38px;
+}
+.f36{
+	font-size:36px;
+}
+.f34{
+	font-size:34px;
+}
+.f32{
+	font-size:32px;
+}
+.f30{
+	font-size:30px;
+}
+.f24{
+	font-size:24px;
+}
+.f26{
+	font-size:26px;
+}
+.f20{
+	font-size:20px;
+}
+.f18{
+	font-size:18px;
+}
+.f16{
+	font-size:16px;
+}
+.f15{
+	font-size:15px;
+}
+.f13{
+	font-size:13px;
+}
+.f14{
+	font-size: 14px;
+}
+.f12{
+	font-size:12px;
+}
+
+.b2{
+	color: #b2b2b2;
+}
+.c{
+	color: #ccc;
+}
+.d{
+	color: #ddd;
+}
+.c0{
+	color: #000;
+}
+.c1 {
+	color: #c1c1c1;
+}
+.c3{
+	color: #333;
+}
+.c6{
+	color:#666;
+}
+
+.c9{
+	color:#999;
+}
+.c007{
+	color:#007ae5
+}
+.cea5{color:#ea5223}
+.fb {
+	font-weight: bold;
+}
+
+.fn {
+	font-weight: normal;
+}
+
+.t2 {
+	text-indent: 2em;
+}
+
+
+/* 定位 */  
+.tl {
+	text-align: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.lt {
+	float: left;
+}
+
+.rt {
+	float: right;
+}
+
+.ov{
+	overflow: hidden;
+}
+.vm {
+	vertical-align: middle;
+}
+
+.pr {
+	position: relative;
+}
+
+.pa {
+	position: absolute;
+}
+
+.pf {
+	position: fixed;
+}
+
+.zoom {
+	zoom: 1;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.none {
+	display: none;
+}
+.block{
+	display: block;
+}
+
+/* 边距 */  
+.m10 { margin:10px;}  
+.m15 { margin:15px;}  
+.m20 { margin:20px;}  
+.m25 { margin:25px;}  
+.m30 { margin:30px;}  
+  
+.mt5 { margin-top:5px;}  
+.mt10 { margin-top:10px;}  
+.mt15 { margin-top:15px;}  
+.mt20 { margin-top:20px;}  
+.mt25 { margin-top:25px;}  
+.mt30 { margin-top:30px;}  
+.mt35 { margin-top: 35px;} 
+.mt38{margin-top: 38px;}
+.mt40 { margin-top:40px;} 
+.mt50 { margin-top:50px;}  
+.mt60 { margin-top:60px;}  
+.mt100 { margin-top:100px;}  
+  
+.mb5 { margin-bottom:5px;}  
+.mb10 { margin-bottom:10px;}  
+.mb15 { margin-bottom:15px;}  
+.mb20 { margin-bottom:20px;}  
+.mb25 { margin-bottom:25px;}  
+.mb30 { margin-bottom:30px;}  
+.mb40 { margin-bottom:40px;} 
+.mb50 { margin-bottom:50px;}  
+.mb100 { margin-bottom:100px;}  
+  
+.ml5 { margin-left:5px;}  
+.ml10 { margin-left:10px;}  
+.ml15 { margin-left:15px;}  
+.ml20 { margin-left:20px;}  
+.ml25 { margin-left:25px;}  
+.ml30 { margin-left:30px;} 
+.ml40 { margin-left:40px;} 
+.ml50 { margin-left:50px;}  
+.ml100 { margin-left:100px;}  
+  
+.mr5 { margin-right:5px;}  
+.mr10 { margin-right:10px;}  
+.mr15 { margin-right:15px;}  
+.mr20 { margin-right:20px;}  
+.mr25 { margin-right:25px;}  
+.mr30 { margin-right:30px;}  
+.mr50 { margin-right:50px;}  
+.mr100 { margin-right:100px;}  
+  
+.p5 { padding:5px;}  
+.p10 { padding:10px;}  
+.p15 { padding:15px;}  
+.p20 { padding:20px;}  
+.p25 { padding:25px;}  
+.p30 { padding:30px;}  
+  
+.pt5 { padding-top:5px;}  
+.pt10 { padding-top:10px;}  
+.pt15 { padding-top:15px;}  
+.pt20 { padding-top:20px;}  
+.pt25 { padding-top:25px;}  
+.pt30 { padding-top:30px;} 
+.pt40 { padding-top:40px;}  
+.pt50 { padding-top:50px;}  
+.pt100 { padding-top:100px;}  
+  
+.pb5 { padding-bottom:5px;}  
+.pb10 { padding-bottom:10px;}  
+.pb15 { padding-bottom:15px;}  
+.pb20 { padding-bottom:20px;}  
+.pb25 { padding-bottom:25px;}  
+.pb30 { padding-bottom:30px;}  
+.pb40 { padding-bottom:40px;}  
+.pb50 { padding-bottom:50px;}  
+.pb100 { padding-bottom:100px;}  
+  
+.pl5 { padding-left:5px;}  
+.pl10 { padding-left:10px;}  
+.pl15 { padding-left:15px;}  
+.pl20 { padding-left:20px;}  
+.pl25 { padding-left:25px;}  
+.pl30 { padding-left:30px;}  
+.pl50 { padding-left:50px;}  
+.pl100 { padding-left:100px;}  
+  
+.pr5 { padding-right:5px;}  
+.pr10 { padding-right:10px;}  
+.pr15 { padding-right:15px;}  
+.pr20 { padding-right:20px;}  
+.pr25 { padding-right:25px;}  
+.pr30 { padding-right:30px;}  
+.pr50 { padding-right:50px;}  
+.pr100 { padding-right:100px;} 
+
+/* 长度高度 */  
+.w10 { width:10px;}  
+.w20 { width:20px;}  
+.w30 { width:30px;}  
+.w40 { width:40px;}  
+.w50 { width:50px;}  
+.w60 { width:60px;}  
+.w70 { width:70px;}  
+.w80 { width:80px;}  
+.w90 { width:90px;}  
+.w100 { width:100px;}  
+.w200 { width:200px;}  
+.w250 { width:250px;}  
+.w300 { width:300px;}  
+.w400 { width:400px;}  
+.w500 { width:500px;}  
+.w600 { width:600px;}  
+.w700 { width:700px;}  
+.w800 { width:800px;}  
+.w960 { width:960px;}  
+.w { width:100%;}  
+  
+.h50 { height:50px;}  
+.h80 { height:80px;}  
+.h100 { height:100px;}  
+.h200 { height:200px;}  
+.h { height:100%;}
+
+
+/*checkbox*/
+
+/*label {
+	font-size: 13px;
+	cursor: pointer;
+	line-height: 26px;
+}
+/*<label><input type="checkbox"><i>✓</i> 点击我CheckBox打钩</label>*//*/
+label i {
+	font-size: 12px;
+	font-style: normal;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	line-height: 12px;
+	color: #fff;
+	vertical-align: middle;
+	margin: -2px 2px 1px 0px;
+	border: #017be6 1px solid;
+	border-radius: 4px;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked+i {
+	background: #017be6;
+}*/
+
+/* ==================
+          布局
+ ==================== */
+
+/*  -- flex弹性布局 -- */
+
+.flex {
+  display: flex;
+}
+
+.basis-xs {
+  flex-basis: 20%;
+}
+
+.basis-sm {
+  flex-basis: 40%;
+}
+
+.basis-df {
+  flex-basis: 50%;
+}
+
+.basis-lg {
+  flex-basis: 60%;
+}
+
+.basis-xl {
+  flex-basis: 80%;
+}
+
+.flex-sub {
+  flex: 1;
+}
+
+.flex-twice {
+  flex: 2;
+}
+
+.flex-treble {
+  flex: 3;
+}
+
+.flex-direction {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: flex-center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+@media (max-width:768px) { 
+body .f36{font-size:24px}
+body .f26{font-size:18px}
+body .f24{font-size:18px}
+body .f20{font-size:16px}
+body .f18{font-size:15px}
+body .f16{font-size:14px}
+body .mb30{margin-bottom:20px}
+body .mt30{margin-top:20px}
+body .mb25{margin-bottom:10px}
+body .mt40{margin-top: 25px;}
+body .pt30{padding-top: 20px;}
+.w1200{width: 100%!important;}
+body h1{font-size:24px}
+#foot-about{display: none;}
+}
+@media(min-width:768px) and (max-width:1200px){
+	body .f36{font-size:24px}
+	body .f24{font-size:18px}
+	body .f18{font-size:16px}
+	body .mb30{margin-bottom:30px}
+	body .mb25{margin-bottom:20px}
+}
+
+
+
+
+
+

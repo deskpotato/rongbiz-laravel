@@ -1,0 +1,152 @@
+@charset "gb2312";
+body {
+	background-color: #333;
+	
+}
+body {
+	font-family: "Î¢ÈíÑÅºÚ", "ËÎÌå", "Arial Narrow";
+	font-size: 14px;
+	
+	background-image: url(../img/www2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, button, textarea, p, th, td {
+	margin: 0;
+	padding: 0;
+}
+input, button, textarea, select, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+	border: none;
+}
+.both {
+	clear: both;
+}
+a:focus {
+	outline: none;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a:hover {
+	text-decoration: none;
+	color: fff;
+}
+
+.copyright {
+	position: fixed;
+	z-index: 50;
+	height: 150px;
+	width: 1200px;
+	line-height: 100px;
+	font-size: 24px;
+	letter-spacing: 0.3em;
+	color: #4184be;
+	margin-left: -600px;
+	text-align: center;
+	left: 50%;
+	font-family: "Î¢ÈíÑÅºÚ";
+	text-decoration: none;
+	bottom: 0px;
+}
+/*  svg   */
+
+
+.Stars {
+	margin: 0 auto;
+	position: relative;
+}
+.Stars svg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	fill: #0CF;
+	
+}
+.brain {
+	margin: 0 auto;
+	position: relative;
+}
+.brain svg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 0;
+	-webkit-animation: svg 3s ease 5s infinite alternate;
+	-moz-animation: svg 3s ease 5s infinite alternate;
+	-ms-animation: svg 3s ease 5s infinite alternate;
+	-o-animation: svg 3s ease 5s infinite alternate;
+	animation: svg 3s ease 5s infinite alternate;
+	fill: #0CF;
+}
+.brain svg #the-main {
+	font-family: "Î¢ÈíÑÅºÚ";
+	text-decoration: none;
+	letter-spacing: 0.2em;
+	cursor: pointer;
+}
+.brain svg #all-H, .brain svg #wing {
+	cursor: pointer;
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 18px;
+	text-decoration: none;
+	letter-spacing: 0.2em;
+}
+#fill-1,#fill-2,#fill-3,#fill-4,#fill-5,#fill-6,#fill-7,#fill-8,#fill-9,#fill-10,#fill-11,#fill-12 {outline:none}
+#line-1, #line-2, #line-3, #line-4, #line-5, #line-6, #line-7, #line-8, #line-9, #line-10, #line-11, #line-12, #ellipse_1_1, #ellipse_2_1, #ellipse_3_1, #ellipse_4_1, #ellipse_5_1, #ellipse_6_1, #ellipse_7_1, #ellipse_8_1, #ellipse_9_1, #ellipse_10_1, #ellipse_11_1, #ellipse_12_1, #wing_texi_1, #wing_texi_2, #wing_texi_3, #wing_texi_4, #wing_texi_5, #wing_texi_6, #wing_texi_7, #wing_texi_8, #wing_texi_9, #wing_texi_10, #wing_texi_11, #wing_texi_12 {display: none;
+}
+ @-webkit-keyframes svg {
+ 0% {
+ -webkit-transform: translateY(0px)
+}
+ 100% {
+ -webkit-transform: translateY(10px)
+}
+}
+ @-moz-keyframes arrow {
+ 0% {
+ -moztransform: translateY(0px)
+}
+ 100% {
+ -moztransform: translateY(10px)
+}
+}
+ @-ms-keyframes arrow {
+ 0% {
+ -ms-transform: translateY(0px)
+}
+ 100% {
+ -ms-transform: translateY(10px)
+}
+}
+ @-o-keyframes arrow {
+ 0% {
+ -o-transform: translateY(0px)
+}
+ 100% {
+ -o-transform: translateY(10px)
+}
+}
+.htmleaf-container {
+	width: 99vw;
+	height: 100vh;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	z-index: 0;
+}

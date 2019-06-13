@@ -1,0 +1,78 @@
+
+@-moz-document url-prefix(){.container-fluid{padding-left:0!important}}
+.row{margin-right:0!important;margin-left:0!important}
+.container{padding-bottom:60px}
+body .container{padding:0}
+@media(max-width:1000px){
+
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding:0;padding-right:5px!important;padding-left:5px!important}
+}
+.human-big-img{background: url(../images/HumanoidRobot/bj_img_001.jpg) no-repeat 100%;min-height: 917px;}
+.human-big-img2{background: url(../images/HumanoidRobot/bj_img_002.jpg) no-repeat 100%;min-height: 714px;}
+.human-big-img3{background: url(../images/HumanoidRobot/bj_img_003.jpg) no-repeat 100%;min-height: 872px;}
+.human-big-img4{background: url(../images/HumanoidRobot/bj_img_004.jpg) no-repeat 100%;margin-bottom: 450px;min-height: 839px;}
+.human-big-img4 .container,.human-big-img3 .container{width: 1200px;}
+.bigimg img{width:100%;margin-top: 60px;}
+/*多超控助手*/
+.onetit{color: #013E8D;font-size:36px;margin-top:60px;text-align:center}
+.twotit{color: #666;font-size:24px;margin-top:40px;text-align:center}
+.zn-img{margin-top: -130px;}
+.zn-img img,.wz-img{width: 90%;}
+.gongneng {margin-top: 30px;}
+.human-big-img2 .shequ,.human-big-img3 .shequ,.human-big-img4 .shequ{margin-top: 60px;}
+.shequ{margin-top: 140px;}
+
+.zhineng .li_nav{width:100%;height:80px;line-height:80px;background:#fafafa;margin-top:3%}
+.zhineng .li_nav li{text-align:center;}
+.zhineng .li_nav li a{display:inline-block;line-height:40px;color:#666;font-size: 24px;}
+.zhineng .li_nav li.active{border-bottom:2px solid #EA5223FF ;}
+.zhineng .li_nav li.active a{color: #333;}
+.zhinengInd .gongneng>span{display:inline-block;text-align:center;margin-right:10%;color:#666}
+.zhinengInd .know_more{padding:0;cursor:pointer}
+.zhinengInd .know_more>div{width:150px;height:40px;line-height:40px;background:#fafafa;color:#333;text-align:center;margin-top:5%}
+.zhinengInd .know_more>div:hover{background:#277bfd;color:#fff}
+.contral_jishu li{text-align:center;position:relative;overflow:hidden}
+.contral_jishu li div{position:absolute;bottom:0;width:100%;border:2px solid #EA5223;}
+@media(max-width:420px){
+	.product-box img.product-box-img{width:100%;height:200px}
+}
+@media(max-width:768px){
+	.onetit{font-size:26px;margin-top:30px}
+	.twotit{font-size:20px;margin-top: 20px;}
+	.zhineng .li_nav li a:hover{border-bottom:0}
+	.zhinengInd .know_more>div{background:#277bfd!important;color:#fff!important}
+	.zhineng .li_nav{margin-top:6%!important}
+	.chan_gong li{text-align:center}
+	.lingyu ul li{margin-top:10px;height:100%!important}
+	.zhineng .li_nav li a {font-size: 18px;}
+	.zhineng .li_nav{height: 50px;line-height: 50px;}
+	.zhinengInd .gongneng>span{margin-right: 0;width: 31%;}
+	.wz-tit{margin-top: 30px;}
+}
+@media (max-width:1000px){
+	.human-big-img,.human-big-img2,.human-big-img3,.human-big-img4{background: url();}
+	.zn-img{margin-top: 30px;}
+}
+
+@media (min-width:768px) and (max-width:1000px){
+	.zn-img{margin-top: 30px;}
+	.zn-img img{width: 50%;}
+}
+
+
+@media(min-width:768px){
+	body .container-fluid{padding: 0;}
+}
+@media(max-width:1200px){
+	body .container{width: 100%;}
+	.human-big-img4 .container,.human-big-img3 .container{width: 100%;}
+	body .cp-img-bottom{background: #fafafa;}
+}
+@media(min-width:1200px){
+	.lingyu ul li{width: 384px;margin: 0 24px 24px 0;padding: 0!important;}
+	.lingyu ul li:nth-child(3n){margin-right: 0;}
+}
+.lingyu{margin-top: 50px;}
+.lingyu ul li{padding:10px;box-sizing:border-box;height:306px}
+.cp-img-bottom{height: 142px;padding: 24px;box-sizing: border-box;background: #fff;color: #666;line-height: 26px;overflow: hidden;}
+.cp-img-big img{width: 100%;}

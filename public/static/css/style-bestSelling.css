@@ -1,0 +1,62 @@
+.big-bg{width:100%;height:6600px;background: url(../images/bestSelling/bg.png) no-repeat;margin-top: 60px;margin-bottom: 450px;}
+.w1200{width: 1200px;margin: auto;}
+.titimg{padding-top: 78px;}
+.common-tit{color: #fff;}
+.common-tit h1 b{position: relative;display: inline-block;width: 345px;}
+.common-tit h1 .tit-line{position: absolute;bottom: -30px;}
+.common-tit h1 .tit-line .b-bline{display: inline-block;width:138px;height:1px;background: #88AEF5;}
+.common-tit h1 .tit-line .b-rline{display: inline-block;width:46px;height:5px;background: #DE0D12;}
+.red{color: #de0d12;text-shadow: 0 7px 4px #000;;}
+.f45{font-size: 45px;}
+.letter-space{letter-spacing: 5px;}
+/*手机模块分类*/
+.mobie-type-box ul{float: left;}
+.mobie-type-box .mobie-produce,.mobie-type-box .mobie-produce2{width: 277px;}
+.mobie-type-box .mobie-produce li,.mobie-type-box .mobie-produce2 li{background: url(../images/bestSelling/yxqd-bkl.png) no-repeat;height: 188px;width: 100%;margin-top: 40px;color: #ACB6EA;}
+.mobie-type-box .mobie-produce h4,.mobie-type-box .mobie-produce2 h4{padding-top: 55px;margin-bottom: 20px;}
+.mobie-type-box p{line-height: 19px;width: 225px;margin: auto;height: 38px;overflow: hidden;}
+.mobie-type-box .mobie-produce2 p{width: 210px;}
+.mobie-type-box .mobie-produce2 li{background: url(../images/bestSelling/yxqd-bkr.png) no-repeat;}
+.mobie-type-box .mobie-line,.mobie-type-box .mobie-line2{width: 147px;}
+.mobie-type-box .mobie-line li,.mobie-type-box .mobie-line2 li{background: url(../images/bestSelling/xianl.png) no-repeat;width: 100%;height: 80px;margin-top: 140px;}
+.mobie-type-box .mobie-line2 li{background: url(../images/bestSelling/xianr.png) no-repeat;}
+.mobie-type-box .mobie{width: 352px;position: relative;}
+.mobie-type-box .mobie img{position: absolute;left: -40px;}
+
+/*营销方法*/
+.c-fbd{color: #FBDA41;}
+.f46{font-size: 46px;}
+.cfff{color: #fff;}
+.tright{text-align: right;}
+.tleft{text-align: left;}
+.c88ae{color: #88aef5;}
+.methods{margin-top: 84px;}
+.methods-right-img{margin-right: 70px;}
+.methods-left-img{margin-left: 70px}
+.methods-left{margin-left: -50px;}
+.methods-left-special{margin-right: -50px;}
+.mt70{margin-top: 70px;}
+.methods-content{line-height: 58px;}
+.methods .tright{width: 620px;}
+
+/*营销工具*/
+.cbcd{color:#BCD0F6}
+.c4a7{color:#4A76EA}
+.tool{width: 960px;margin: 75px auto;}
+.tool li{width: 240px;height: 280px;float: left;margin: 25px 60px 0;text-align: center;}
+.tool li:nth-child(3n-2){margin-left: 0;}
+.tool li:nth-child(3n){margin-right: 0;}
+.tool-bg{background: url(../images/bestSelling/kshbj-bg.png) no-repeat;width: 125px;height: 141px;margin: auto;position: relative;}
+.tool-bg-img{position: absolute;top: 40px;right: 30px;}
+.tool .tleft{line-height: 24px;height: 45px;overflow: hidden;word-break:break-all;}
+
+/*开启畅销无忧*/
+.opening{width: 100%;height: 833px;/*background: url(../images/bestSelling/bgtable.png) no-repeat;*/margin-top: 90px;}
+table{width: 1200px;color:#BCD0F6 ;font-weight: normal;}
+table th{height: 50px;text-align: center;font-size: 24px;font-weight: normal;color:#fff ;}
+table tr{height: 45px;border-color: #001857;}
+table tr td{border-color: #001857;text-align: center;font-size: 18px;}
+table tr:nth-child(2n){background:rgba(17,40,82,.7);}
+table tr:nth-child(2n-1){background: rgba(1,48,117,.7);}
+table .tr-blue,table .tr-org{display: inline-block;width: 10px;height: 10px;border-radius: 50%;background: #BCD0F6;}
+table .tr-org{background: #ea5223;}

@@ -7,11 +7,11 @@
 @section('title','仿人型机器人')
 
 @section('content')
-<!--**大图**-->
+{{--  <!--**大图**-->  --}}
 <div class="bigimg">
     <img src="{{ asset('static/images/HumanoidRobot/ban_img_001.jpg') }}" alt="" />
 </div>
-<!--智能机器人背景图-->
+{{--  <!--智能机器人背景图-->  --}}
 <div class="human-big-img">
     <div class="container-fluid" >
       <div class="container">
@@ -69,10 +69,10 @@
         </div>	
     </div>
 </div>
-<!--控制技术背景图-->
+{{--  <!--控制技术背景图-->  --}}
 <div class="human-big-img2">
     <div class="container-fluid zhineng ">
-            <!--控制技术-->
+            {{--  <!--控制技术-->  --}}
             <div style="text-align: center;" id="jump2">
                 <div class="onetit shequ" style="color: #666;">控制技术</div>
                 <div class="f16 mt20">解决科研、工业领域实用中机器人动作自由度低和灵活度低、控制方式单一而造成的实用功能少和受限的情况</div>
@@ -107,7 +107,7 @@
                         </li>
                     </ul>
                 </div>
-                <!--位置控制-->
+                {{--  <!--位置控制-->  --}}
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 zhinengInd mt50" >
                     <div class="lt col-lg-5 col-md-5 col-sm-12 col-xs-12 mb10">
                         <img src="{{ asset('static/images/HumanoidRobot/kzjs_img_001.png') }}" alt="" class="wz-img"/>
@@ -125,7 +125,7 @@
             </div>
     </div>		
 </div>
-<!--产品功能背景图-->
+{{--  <!--产品功能背景图-->  --}}
 <div class="human-big-img3">
     <div class="container-fluid zhineng ">
                 <div class="container">
@@ -190,7 +190,7 @@
             
     </div>
 </div>
-<!--适用领域背景图-->
+{{--  <!--适用领域背景图-->  --}}
 <div class="human-big-img4">
     <div class="container-fluid zhineng ">			
             <div class="container">

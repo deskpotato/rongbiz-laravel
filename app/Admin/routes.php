@@ -26,6 +26,8 @@ Route::group([
      $router->resource('links',LinksController::class);
     //子公司管理
      $router->resource('otherCompanys',OtherCompanysController::class);
+    //新闻管理
+    $router->resource('articles',ArticlesController::class);
 
 
 

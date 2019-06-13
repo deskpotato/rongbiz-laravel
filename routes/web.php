@@ -35,6 +35,19 @@ Route::group(['prefix' => 'single','name'=>'single.'], function () {
     Route::get('bestSelling','SinglesController@bestSelling')->name('bestSelling');
     //企业转型升级
     Route::get('transformation','SinglesController@transformation')->name('transformation');
+    //工业机器人
+    Route::get('industryRobot','SinglesController@industryRobot')->name('industryRobot');
+    //消防救援机器人
+    Route::get('fireRescue','SinglesController@fireRescue')->name('fireRescue');
+    //静模式智能改造
+    Route::get('silentReform','SinglesController@silentReform')->name('silentReform');
+    //天工开物-工业大脑
+    Route::get('industrialBrain','SinglesController@industrialBrain')->name('industrialBrain');
+    //天工开物-物联网关
+    Route::get('wlGate','SinglesController@wlGate')->name('wlGate');
 
 
 });
+
+Route::get('news','NewsController@index')->name('news.index');
+Route::get('news/{article}','NewsController@show')->name('news.show');

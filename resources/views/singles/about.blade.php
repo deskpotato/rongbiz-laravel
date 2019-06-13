@@ -158,28 +158,30 @@
 @endsection
 
 @section('script')
-$(function(){
-	var swiper = new Swiper('.swiper-container', {
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			slidesPerView:5,
-			paginationClickable: true,
-			spaceBetween:20,
-			loop: false,
-			breakpoints: {
-			
-				768: {
-					slidesPerView: 3
+<script>
+	$(function(){
+		var swiper = new Swiper('.swiper-container', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
 				},
-				640: {
-					slidesPerView: 2
+				slidesPerView:5,
+				paginationClickable: true,
+				spaceBetween:20,
+				loop: false,
+				breakpoints: {
+				
+					768: {
+						slidesPerView: 3
+					},
+					640: {
+						slidesPerView: 2
+					},
+					320: {
+						slidesPerView: 2
+					}
 				},
-				320: {
-					slidesPerView: 2
-				}
-			},
+			});
 		});
-	});
+</script>
 @endsection

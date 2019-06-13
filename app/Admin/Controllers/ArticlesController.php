@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\OtherCompany;
+use App\Models\Article;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use Illuminate\Support\Str;
 
-class OtherCompanysController extends Controller
+class ArticlesController extends Controller
 {
     use HasResourceActions;
 
@@ -80,18 +80,24 @@ class OtherCompanysController extends Controller
      */
     protected function grid()
     {
-        $grid = new Grid(new OtherCompany);
+        $grid = new Grid(new Article);
 
-        $grid->id('Id');
+
+        $grid->id('Id')->sortable();
         $grid->title('标题');
-        $grid->image('图片')->display(function($img){
-            return "<img src='".$img."' />";
+       
+        $grid->image('缩略图')->display(function($img){
+            return "<img src='".$this->image_url."'  width='200'/>";
         });
-        $grid->description('描述')->display(function($des){
-            return Str::limit($des,180,'...');
+         $grid->description('描述')->display(function($des){
+            return Str::limit($des,60,'...');
         });
-        $grid->created_at('Created at');
-        $grid->updated_at('Updated at');
+        $grid->hits('浏览量');
+        $grid->author('来源');
+        $grid->category('所属分类');
+
+        $grid->created_at('创建时间');
+        $grid->updated_at('更新时间');
 
         return $grid;
     }
@@ -104,14 +110,17 @@ class OtherCompanysController extends Controller
      */
     protected function detail($id)
     {
-        $show = new Show(OtherCompany::findOrFail($id));
+        $show = new Show(Article::findOrFail($id));
 
         $show->id('Id');
-        $show->title('名称');
-        $show->image('图片')->setEscape(false)->as(function($img){
-            return "<img src='".$img."'/>";
+        $show->title('标题');
+        $show->description('简介');
+        $show->image_url('Image')->setEscape(false)->as(function($img){
+            return "<img src='".$img."' width='200'/>";
         });
-        $show->description('描述');
+        $show->content('内容')->unescape();
+        $show->hits('浏览量');
+        $show->category('所属分类');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -125,12 +134,29 @@ class OtherCompanysController extends Controller
      */
     protected function form()
     {
-        $form = new Form(new OtherCompany);
+        $form = new Form(new Article);
 
-        $form->text('title', '名称');
-        $form->image('image', '图片')->uniqueName();
-        $form->image('image_white', '白色背景图片')->uniqueName();
-        $form->textarea('description', '描述');
+        $form->text('title', '标题')->rules('required');
+        $form->textarea('description', '描述')->rules('required');
+        $form->UEditor('content', '内容')->rules('required');
+        // $form->image('image', '图片')->uniqueName()->rules('required|image');
+        $form->cropper('image','缩略图');
+        $form->number('hits', '浏览量');
+        $form->text('author', '来源');
+
+        $default= 1;
+        $parameters =  request()->route()->parameters();
+        if(!empty($parameters)){
+            $one = Article::find($parameters['article']);
+            $default = $one->default_category;
+        }
+        
+        $method = request()->method();
+        if($method == 'GET'){
+            $form->ignore('category')->select('category', '所属分类')->options(['1'=>'集团新闻','2'=>'行业资讯'])->default($default);
+        }else{
+            $form->select('category', '所属分类')->options(['1'=>'集团新闻','2'=>'行业资讯'])->default($default);
+        }
 
         return $form;
     }

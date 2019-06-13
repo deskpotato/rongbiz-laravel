@@ -54,4 +54,32 @@ class SinglesController extends Controller
         return view('singles.transformation');
     }
 
+    //工业机器人
+    public function industryRobot()
+    {
+        return view('singles.industryRobot');    
+    }
+
+    //消防救援机器人
+    public function fireRescue()
+    {
+        return view('singles.fireRescue');    
+    }
+    //静模式智能改造
+    public function silentReform()
+    {
+        return view('singles.silentReform');    
+    }
+    //industrialBrain
+
+    public function industrialBrain()
+    {
+        return view('singles.industrialBrain'); 
+    }
+
+    public function wlGate()
+    {
+        return view('singles.wlGate');
+    }
+
 }

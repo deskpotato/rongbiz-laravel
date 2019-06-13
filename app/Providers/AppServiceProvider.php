@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\link;
 use Illuminate\Support\Facades\View;
 use App\Models\Site;
+use App\Models\OtherCompany;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,5 +34,8 @@ class AppServiceProvider extends ServiceProvider
         //站点配置
         $site = Site::find(1);
         View::share('site',$site);
+        //子集团
+        $other_companies = OtherCompany::get();
+        View::share('otherCompanies',$other_companies);
     }
 }

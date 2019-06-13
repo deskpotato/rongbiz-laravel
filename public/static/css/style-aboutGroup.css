@@ -21,6 +21,25 @@ h3.big-tit{padding: 70px 0 70px;color: #3E3E3E;margin: 0;}
 .pioneer-text{display: inline-block;color: #303030;line-height: 40px;}
 .pioneer-img{margin-top: -40px;}
 
+/*荣誉资质*/
+.honor{width: 100%;height: 835px;background:#fff url(../images/aboutGroup/ryzz-bg.png) no-repeat;}
+.swiper-container .swiper-slide{height: 630px;}
+.swiper-slide li{float: left;width: 225px;height: 190px;margin:50px 18px 50px 0;text-align: center;}
+.swiper-slide li:nth-child(5n){margin-right: 0;}
+.swiper-slide li p{line-height: 26px;}
+.swiper-pagination .swiper-pagination-bullet{width: 50px;height: 5px;background: #999;border-radius: 0;}
+.swiper-pagination .swiper-pagination-bullet-active{background: #013E8DFF;}
+
+/*集团架构*/
+.group-structure{width: 100%;height: 1330px;background: #fff;margin-bottom: 450px;}
+.group-structure ul li{width: 100%;height: 244px;border: 1px solid #e6e6e6;padding: 38px 42px 40px 80px;box-sizing: border-box;margin-bottom: 30px;overflow: hidden;display: flex;align-items: center;position: relative;}
+.lineh30{line-height: 30px;}
+.special-li div:first-child img{margin-top: -45px;}
+.special-li p{width: 240px; position: absolute;left: 57px;}
+
+
+
+
 @media(min-width:768px ) {
 	.jumbotron h1.bdImgTxt_first{font-size: 56px;color: #fff;margin-top: 125px;} 
 	.jumbotron p.bdImgTxt_sec{font-size: 26px;color: #ECF8FF;margin-top: 30px;}
@@ -29,7 +48,27 @@ h3.big-tit{padding: 70px 0 70px;color: #3E3E3E;margin: 0;}
 }
 @media (max-width:768px) { 
 	.container{width: 100%!important;}
-	.bigtit{width: 100%;}
+	h3.big-tit{width: 100%;padding: 30px 0 30px;}
+	.jumbotron h1.bdImgTxt_first,.jumbotron p.bdImgTxt_sec{color: #fff;} 
+	.about-company{padding: 15px;}
+	/*企业文化*/
+	.company-culture li:first-child{margin-top: 30px;}
+	.company-culture li{text-align: center;position: relative;}
+	.company-culture li:nth-child(3){margin-top: 50px;}
+	.company-culture .culture-second{position: absolute;bottom: -60px;}
+	.company-culture li img{width: 70%;}
+	.company-culture .culture-second,.company-culture .culture-text2{margin-left: 0;margin-right: 0;margin-top: 0;}
+	/*工业互联网先行者*/
+	.pioneer-img{display: none;}
+	.inter-pioneer .process-timeline .process-row .process-content h2{font-size: 20px;width: 151px;}
+	.inter-pioneer .process-timeline .process-row .process-content p{font-size: 18px;}
+	
+	.group-structure{padding: 15px;}
+	.group-structure ul li{height: auto;padding:10px}
+	.group-structure ul li .mr50{display: none;}
+	.group-structure ul li div:first-child{position: absolute;opacity: 0.3;}
+	.group-structure ul li:nth-child(4){padding: 10px!important;}
+	.group-structure{margin-bottom: 200px;}
 }
 
 

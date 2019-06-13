@@ -24,6 +24,8 @@ Route::group([
      $router->resource('lhnews',LhnewsController::class);
      //友情链接
      $router->resource('links',LinksController::class);
+    //子公司管理
+     $router->resource('otherCompanys',OtherCompanysController::class);
 
 
 

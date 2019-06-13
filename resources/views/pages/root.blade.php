@@ -300,38 +300,22 @@
     </div>
     <div class="rongbiz-big-box">
         <div class="container" style="padding: 0;">
-            <div class="rongbiz-sm-box">
-                <div class="lt rongbiz-sm-img">
-                    <img src="../../static/images/index/rstxlogo.png"/>
+
+        @if (count($otherCompanies) > 0)
+            @foreach ($otherCompanies as $item)
+                <div class="rongbiz-sm-box">
+                    <div class="lt rongbiz-sm-img">
+                        <img src="{{ $item->image_white }}"/>
+                    </div>
+                    <div class="lt rongbiz-sm-text c3 f16">
+                            {{ $item->description }}
+                    </div>
                 </div>
-                <div class="lt rongbiz-sm-text c3 f16">
-                    青岛容商天下网络有限公司依托互联网，以软硬件、机器人研发为核心，主要从事互联网高新技术研发、C2P工业云平台运营、企业智能升级改造、移动互联网应用等领域，市场覆盖全国。公司首创自主知识产权的C2P工业互联网生态模式、D2M全球化批量定制模式、静默式智能改造模式。通过运用互联网、移动互联网、工业以太网、物联网、云计算、大数据等先进技术，建立起集个性化、数字化于一体的智能生态模式。
-                </div>
-            </div>
-            <div class="rongbiz-sm-box">
-                <div class="lt rongbiz-sm-img">
-                    <img src="../../static/images/index/fxlogo.png"/>
-                </div>
-                <div class="lt rongbiz-sm-text c3 f16">
-                    伏羲智能机器人（青岛）有限公司是一家以机器人技术为核心，致力于智能产品及服务的高科技企业。公司成立于2017年，总部位于山东青岛即墨。公司拥有自主核心技术、核心零部件、核心产品及行业系统解决方案为一体的完整全产业价值链，成功研制了具有完全自主知识产权的工业机器人、消防救援机器人和仿人型机器人三大系列产品，面向智能装备、智能工厂、生产安全和智慧生活，形成四大产业方向，致力于打造数字化物联新模式。“伏羲智能”传承民族精神，为中华民族的伟大复兴贡献力量。
-                </div>
-            </div>
-            <div class="rongbiz-sm-box">
-                <div class="lt rongbiz-sm-img">
-                    <img src="../../static/images/index/gxrclog.png"/>
-                </div>
-                <div class="lt rongbiz-sm-text c3 f16">
-                    共享人才有限公司成立于2018年1月，基于“共享经济”思维，立足“国家人才引领发展”战略，服务全球人才和企业。重点解决大学生就业难、择业难问题；中小企业用人难、用人贵问题；创新创业者建团队难、找资金难问题；自由职业者无稳定收入、无社会保障问题。通过技能共享、时间共享、知识共享、信息共享、项目共享、产品共享、服务共享、团队共享、资本共享等多种共享形式，展现人才价值、释放人才潜能。帮助人才获得优质工作、迈入品质生活。
-                </div>
-            </div>
-            <div class="rongbiz-sm-box">
-                <div class="lt rongbiz-sm-img">
-                    <img src="../../static/images/index/wrlogo.png"/>
-                </div>
-                <div class="lt rongbiz-sm-text c3 f16">
-                    卫瑞生物材料科技有限公司位于青岛市即墨区，是一家专注于生物医药产品研发与应用的高新技术企业。公司充分利用青岛海洋生物科研资源优势，已掌握4D生物材料、3D悬空打印、4D人体支架打印等核心技术，拥有数十项国际和国内发明专利。卫瑞生物是全球首个将4D打印技术应用于现实产品的企业，研发并制造了全球首台4D人体支架打印机和首个4D人体生物支架，广泛应用于血管、胆管、腔道、鼻腔、泪管、脾脏、肝脏、骨钉、骨板、体外固定板和医用多维立体工件领域。公司长期与国内外大型科研院所和国际级专家学者开展联合科研，与全国各类甲级医疗机构结为临床应用合作伙伴，是国内生物科技领域产学研实践者和先锋企业。
-                </div>
-            </div>
+            @endforeach
+		@endif
+
+
+
         </div>
     </div>
     {{--  <!--****容商天下集团****-->  --}}

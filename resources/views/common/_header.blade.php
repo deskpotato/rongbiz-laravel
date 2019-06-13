@@ -6,118 +6,82 @@
 
 <header>
 	<img src="{{ asset('static/common/images/logo.png') }}" class="gw-logo"/>
-	<!--大屏展示-->
+	{{--  <!--大屏展示-->  --}}
 	<div class="header_box">
 		<div class="header-w header-lg">
-		<a href="javascript:;" class="header-nohover active">首页</a>
+		<a href="{{ route('root') }}" class="header-nohover {{ Route::currentRouteName()=='root' ? 'active':'' }}">首页</a>
 		<a href="javascript:;" id="product-service">产品&服务</a>
-		<a href="javascript:;" class="header-nohover">新闻服务</a>
-		<a href="javascript:;" class="header-nohover">关于集团</a>
+		<a href="{{ route('news.index') }}" class="header-nohover {{ Route::currentRouteName()=='news.index' ? 'active':'' }}">新闻服务</a>
+		<a href="{{ route('about') }}" class="header-nohover {{ Route::currentRouteName()=='about' ? 'active':'' }}">关于集团</a>
 	</div>
 	</div>
 	
-	<!--导航移入展示效果-->
+	{{--  <!--导航移入展示效果-->  --}}
 	<div class="nav-hover-show">
-		<ul class="nav-show">
-			<h4><a href="javascript:;" title="工业互联网">工业互联网</a></h4>
-			<li><a href="javascript:;" title="工业互联网应用与服务集群">工业互联网应用与服务集群</a></li>
-			<li><a href="javascript:;" title="C2P工业云">C2P工业云</a></li>
-			<li><a href="javascript:;" title="天工开物工业大脑">天工开物工业大脑</a></li>
-			<li><a href="javascript:;" title="天工开物物联网关">天工开物物联网关</a></li>
-			
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;" title="智能机器人">智能机器人</a></h4>
-			<li><a href="javascript:;" title="工业机器人">工业机器人</a></li>
-			<li><a href="javascript:;" title="仿人型机器人">仿人型机器人</a></li>
-			<li><a href="javascript:;" title="消防救援机器人">消防救援机器人</a></li>
-			<li><a href="javascript:;" title="协作机器人">协作机器人</a></li>
-			<li><a href="javascript:;" title="消防搜救无人机">消防搜救无人机</a></li>
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;"  title="管理咨询">管理咨询</a></h4>
-			<li><a href="javascript:;"  title="两化融合管理体系贯标">两化融合管理体系贯标</a></li>
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;"  title="营销推广">营销推广</a></h4>
-			<li><a href="javascript:;"  title="畅销无忧">畅销无忧</a></li>
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;"  title="智能制造">智能制造</a></h4>
-			<li><a href="javascript:;"  title="静默式智能改造">静默式智能改造</a></li>
-			<li><a href="javascript:;"  title="企业转型升级服务">企业转型升级服务</a></li>
-			<li><a href="javascript:;"  title="智能工厂">智能工厂</a></li>
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;"  title="共享人才">共享人才</a></h4>
-		</ul>
-		<ul class="nav-show">
-			<h4><a href="javascript:;"  title="高分子材料与生物医药">高分子材料与生物医药</a></h4>
-		</ul>
+		@include('common._menu_links')
 	</div>
 
-	<!--小屏展示-->
+	{{--  <!--小屏展示-->  --}}
 	<div class="header-w header-sm">
 		<img src="{{ asset('static/common/images/sm-btn.png') }}" class="sm-btn" data-btn=0 />
-		<!--小屏按钮展示-->
+		{{--  <!--小屏按钮展示-->  --}}
 		<div class="header-sm-show animated none">
 			<a href="javascript:;">首页</a>
 			<a href="javascript:;" class="first-toggle">产品&服务
 				<img src="{{ asset('static/common/images/arr_down_333.png') }}" class="rt first-down"/>
-				<!--产品服务的下拉-->
+				{{--  <!--产品服务的下拉-->  --}}
 				<div class="sm-service-show none">
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="工业互联网" class="sm-service-second-tit second-toggle" >工业互联网</a>
 						<div class="service-show-sm none">
-							<a href="javascript:;" title="工业互联网应用与服务集群">工业互联网应用与服务集群</a>
-							<a href="javascript:;" title="C2P工业云">C2P工业云</a>
-							<a href="javascript:;" title="天工开物工业大脑">天工开物工业大脑</a>
-							<a href="javascript:;" title="天工开物物联网关">天工开物物联网关</a>
+							<a href="https://www.rongbiz.com" target="_blank"  title="工业互联网应用与服务集群">工业互联网应用与服务集群</a>
+							<a href="http://openc2p.com" target="_blank" title="C2P工业云">C2P工业云</a>
+							<a href="{{ route('industrialBrain') }}" title="天工开物工业大脑">天工开物工业大脑</a>
+							<a href="{{ route('wlGate') }}"  title="天工开物物联网关">天工开物物联网关</a>
 						</div>
 					</div>
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="智能机器人" class="sm-service-second-tit second-toggle">智能机器人</a>
 						<div class="service-show-sm none">
-							<a href="javascript:;" title="工业机器人">工业机器人</a>
-							<a href="javascript:;" title="仿人型机器人">仿人型机器人</a>
-							<a href="javascript:;" title="仿人型机器人">仿人型机器人</a>
-							<a href="javascript:;" title="消防救援机器人">消防救援机器人</a>
-							<a href="javascript:;" title="协作机器人">协作机器人</a>
-							<a href="javascript:;" title="消防搜救无人机">消防搜救无人机</a>
+							<a href="{{ route('industryRobot') }}" title="工业机器人">工业机器人</a>
+							<a href="{{ route('humanoidRobot') }}" title="仿人型机器人">仿人型机器人</a>
+							<a href="{{ route('fireRescue') }}"  title="消防救援机器人">消防救援机器人</a>
+							<a href="{{ route('cooperationRobot') }}" title="协作机器人">协作机器人</a>
+							<a href="{{ route('wuRenJi') }}" title="消防搜救无人机">消防搜救无人机</a>
 							
 						</div>
 					</div>
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="管理咨询" class="sm-service-second-tit second-toggle">管理咨询</a>
 						<div class="service-show-sm none">
-							<a href="javascript:;" title="两化融合管理体系贯标">两化融合管理体系贯标</a>
+							<a href="{{ route('twoIntegration') }}" title="两化融合管理体系贯标">两化融合管理体系贯标</a>
 						</div>
 					</div>
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="营销推广" class="sm-service-second-tit second-toggle">营销推广</a>
 						<div class="service-show-sm none">
-							<a href="javascript:;" title="畅销无忧">畅销无忧</a>
+							<a href="{{ route('bestSelling') }}" title="畅销无忧">畅销无忧</a>
 						</div>
 					</div>
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="智能制造" class="sm-service-second-tit second-toggle">智能制造</a>
 						<div class="service-show-sm none">
-							<a href="javascript:;" title="静默式智能改造">静默式智能改造</a>
-							<a href="javascript:;" title="企业转型升级服务">企业转型升级服务</a>
-							<a href="javascript:;" title="智能工厂">智能工厂</a>
+							<a href="{{ route('silentReform') }}" title="静默式智能改造">静默式智能改造</a>
+							<a href="{{ route('transformation') }}" title="企业转型升级服务">企业转型升级服务</a>
+							<a href="{{ route('intelligenFactory') }}" title="智能工厂">智能工厂</a>
 							
 						</div>
 					</div>
 					<div class="sm-service-show-inter">
-						<a href="javascript:;" title="共享人才" class="sm-service-second-tit">共享人才</a>
+						<a href="http://openhr.com.cn" target="_blank" title="共享人才" class="sm-service-second-tit">共享人才</a>
 					</div>
 					<div class="sm-service-show-inter">
 						<a href="javascript:;" title="高分子材料与生物医药" class="sm-service-second-tit">高分子材料与生物医药</a>
 					</div>
 				</div>
 			</a>
-			<a href="javascript:;">新闻资讯</a>
-			<a href="javascript:;">关于集团</a>
+			<a href="{{ route('news.index') }}">新闻服务</a>
+			<a href="{{ route('about') }}">关于集团</a>
 		</div>
 	</div>
 	</header>

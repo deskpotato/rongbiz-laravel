@@ -22,7 +22,7 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 
 
 //单页路由组
-Route::group(['prefix' => 'single','name'=>'single.'], function () {
+Route::group(['prefix' => 'single'], function () {
     //关于我们
     Route::get('about','SinglesController@about')->name('about');
     //智能工厂
@@ -45,6 +45,14 @@ Route::group(['prefix' => 'single','name'=>'single.'], function () {
     Route::get('industrialBrain','SinglesController@industrialBrain')->name('industrialBrain');
     //天工开物-物联网关
     Route::get('wlGate','SinglesController@wlGate')->name('wlGate');
+    //搜救无人机
+    Route::get('wuRenJi',function(){
+            return 'wuRenJi';
+    })->name('wuRenJi');
+    //协作机器人cooperationRobot
+    Route::get('cooperationRobot',function(){
+            return 'cooperationRobot';
+    })->name('cooperationRobot');
 
 
 });

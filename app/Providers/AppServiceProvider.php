@@ -7,6 +7,7 @@ use App\Models\link;
 use Illuminate\Support\Facades\View;
 use App\Models\Site;
 use App\Models\OtherCompany;
+use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -37,5 +38,6 @@ class AppServiceProvider extends ServiceProvider
         //子集团
         $other_companies = OtherCompany::get();
         View::share('otherCompanies',$other_companies);
+
     }
 }

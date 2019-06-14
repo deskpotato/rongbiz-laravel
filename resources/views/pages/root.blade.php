@@ -217,74 +217,80 @@
     
     <div class="news-big-box">
          <div class="container news-big-tit" >
-             <a href="javascript:;" class="active">集团新闻</a>
-             <a href="javascript:;">行业资讯</a>
+             <a href="javascript:;" class="active" data-x="c">集团新闻</a>
+             <a href="javascript:;" data-x="h">行业资讯</a>
          </div>
          <div class="container" style="padding: 0;">
              {{--  <!--左侧大图-->  --}}
-             <a href="javascript:;" class="lt news-big-lt-outbox">
-                 <img src="../../static/images/index/newda.png" alt="" />
-                 <div class="mt30 c9 f18">2018-07-07</div>
-                 <h4 class="mt30 c3 f20">容商天下邀请清华大学教授-刘鹰莅临指导</h4>
-                 <p class="f16 c6 mt20">2017年7月7日上午，国家版权局版权管理司司长于慈珂一行，在山东省版权局副局长谢宁、青岛市文广新局副局长韩大钧...</p>
-                 <div class="flex justify-between c9 f16 mt38">
-                     <span>10分钟</span>
-                     <span>200 阅读&nbsp;&nbsp;&nbsp;50 评论</span>
-                 </div>
-             </a>
+            <div class="c_recommend">
+             @if ($c_recommend)
+                <a href="javascript:;" class="lt news-big-lt-outbox">
+                    <img src="{{ $c_recommend->image_url }}" alt=""  width="578" height="400"/>
+                    <div class="mt30 c9 f18">{{ $c_recommend->created_at->toDateString() }}</div>
+                    <h4 class="mt30 c3 f20">{{ $c_recommend->title }}</h4>
+                    <p class="f16 c6 mt20">{{ Str::limit($c_recommend->description,100,'...') }}</p>
+                    <div class="flex justify-between c9 f16 mt38">
+                        <span>{{ $c_recommend->created_at->diffForHumans() }}</span>
+                        <span>{{ $c_recommend->hits }} 阅读</span>
+                    </div>
+                </a>
+             @endif
+            </div>
+            <div class="h_recommend" style="display:none;">
+                @if ($h_recommend)
+                    <a href="javascript:;" class="lt news-big-lt-outbox">
+                        <img src="{{ $h_recommend->image_url }}" alt=""  width="578" height="400"/>
+                        <div class="mt30 c9 f18">{{ $h_recommend->created_at->toDateString() }}</div>
+                        <h4 class="mt30 c3 f20">{{ $h_recommend->title }}</h4>
+                        <p class="f16 c6 mt20">{{ Str::limit($h_recommend->description,100,'...') }}</p>
+                        <div class="flex justify-between c9 f16 mt38">
+                            <span>{{ $h_recommend->created_at->diffForHumans() }}</span>
+                            <span>{{ $h_recommend->hits }} 阅读</span>
+                        </div>
+                    </a>
+                @endif
+            </div>
+
+
              {{--  <!--右侧小图-->  --}}
              <div class="lt news-big-rt-outbox ml30">
                  <div class="news-date">
-                     <a href="javascript:;" class="active">今天</a>
-                     <a href="javascript:;">本周</a>
-                     <a href="javascript:;">本月</a>
-                     <a href="javascript:;">今年</a>
-                     <a href="javascript:;">更早</a>
+                     <a href="javascript:;" class="active">查看更多</a>
                  </div>
                  {{--  <!--列表单个框-->  --}}
-                 <div class="news-sm-box ov flex justify-between">
-                     <img src="../../static/images/index/newxiao.png" alt=""/>
-                     <div class="ml20">
-                         <h4 class="f18"><a href="javascript:;">容商天下邀请清华大学教授-刘鹰莅临指导</a></h4>
-                         <p class="f16 c6 mt10">2017年7月7日上午，国家版权局版权管理司司长于慈珂一行，在山东省版权局副局长谢宁、青岛..</p>
-                         <div class="flex justify-between c9 f16 mt15">
-                             <span>10分钟</span>
-                             <span>200 阅读&nbsp;&nbsp;&nbsp;50 评论</span>
-                         </div>
-                     </div>
+                 <div class="c_recommend">
+                 @if (count($c_news) > 0)
+                    @foreach ($c_news as $item)
+                        <div class="news-sm-box ov flex justify-between">
+                            <img src="{{ $item->image_url }}" alt="" width="177" height="120"/>
+                            <div class="ml20">
+                                <h4 class="f18"><a href="javascript:;">{{ Str::limit($item->title,34,'...') }}</a></h4>
+                                <p class="f16 c6 mt10"> {{ Str::limit($item->description,100,'...') }}</p>
+                                <div class="flex justify-between c9 f16 mt15">
+                                    <span>{{ $item->created_at->diffForHumans() }}</span>
+                                    <span>{{ $item->hits }} 阅读</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach 
+                 @endif
                  </div>
-                 <div class="news-sm-box ov flex justify-between">
-                     <img src="../../static/images/index/newxiao.png" alt=""/>
-                     <div class="ml20">
-                         <h4 class="f18"><a href="javascript:;">容商天下邀请清华大学教授-刘鹰莅临指导</a></h4>
-                         <p class="f16 c6 mt10">2017年7月7日上午，国家版权局版权管理司司长于慈珂一行，在山东省版权局副局长谢宁、青岛..</p>
-                         <div class="flex justify-between c9 f16 mt15">
-                             <span>10分钟</span>
-                             <span>200 阅读&nbsp;&nbsp;&nbsp;50 评论</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="news-sm-box ov flex justify-between">
-                     <img src="../../static/images/index/newxiao.png" alt=""/>
-                     <div class="ml20">
-                         <h4 class="f18"><a href="javascript:;">容商天下邀请清华大学教授-刘鹰莅临指导</a></h4>
-                         <p class="f16 c6 mt10">2017年7月7日上午，国家版权局版权管理司司长于慈珂一行，在山东省版权局副局长谢宁、青岛..</p>
-                         <div class="flex justify-between c9 f16 mt15">
-                             <span>10分钟</span>
-                             <span>200 阅读&nbsp;&nbsp;&nbsp;50 评论</span>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="news-sm-box ov flex justify-between">
-                     <img src="../../static/images/index/newxiao.png" alt=""/>
-                     <div class="ml20">
-                         <h4 class="f18"><a href="javascript:;">容商天下邀请清华大学教授-刘鹰莅临指导</a></h4>
-                         <p class="f16 c6 mt10">2017年7月7日上午，国家版权局版权管理司司长于慈珂一行，在山东省版权局副局长谢宁、青岛..</p>
-                         <div class="flex justify-between c9 f16 mt15">
-                             <span>10分钟</span>
-                             <span>200 阅读&nbsp;&nbsp;&nbsp;50 评论</span>
-                         </div>
-                     </div>
+                 <div class="h_recommend" style="display:none;">
+                 @if (count($h_news) > 0)
+                     @foreach ($h_news as $item)
+                        <div class="news-sm-box ov flex justify-between">
+                            <img src="{{ $item->image_url }}" alt="" width="177" height="120"/>
+                            <div class="ml20">
+                                <h4 class="f18"><a href="javascript:;">{{ Str::limit($item->title,34,'...') }}</a></h4>
+                                <p class="f16 c6 mt10"> {{ Str::limit($item->description,100,'...') }}</p>
+                                <div class="flex justify-between c9 f16 mt15">
+                                    <span>{{ $item->created_at->diffForHumans() }}</span>
+                                    <span>{{ $item->hits }} 阅读</span>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach 
+                 @endif
                  </div>
              </div>
          </div>
@@ -300,7 +306,6 @@
     </div>
     <div class="rongbiz-big-box">
         <div class="container" style="padding: 0;">
-
         @if (count($otherCompanies) > 0)
             @foreach ($otherCompanies as $item)
                 <div class="rongbiz-sm-box">
@@ -313,9 +318,6 @@
                 </div>
             @endforeach
 		@endif
-
-
-
         </div>
     </div>
     {{--  <!--****容商天下集团****-->  --}}
@@ -324,11 +326,20 @@
 @section('script')
     <script>
             $('.news-big-tit a').click(function(){
-				$(this).addClass('active').siblings('a').removeClass('active');
+                $(this).addClass('active').siblings('a').removeClass('active');
+                var hs = $(this).data('x');
+                if(hs == 'c'){
+                    $('.h_recommend').hide();
+                    $('.c_recommend').show();
+                }else if(hs == 'h'){
+                    $('.c_recommend').hide();
+                    $('.h_recommend').show();
+                }
 			})
-			
+			/**
 			$('.news-date a').click(function(){
 				$(this).addClass('active').siblings('a').removeClass('active');
-			})
+            })
+            */
     </script>
 @endsection

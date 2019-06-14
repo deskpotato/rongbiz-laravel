@@ -82,4 +82,10 @@ class SinglesController extends Controller
         return view('singles.wlGate');
     }
 
+    //协作机器人
+    public function  cooperationRobot()
+    {
+        return view('singles.cooperationRobot');
+    }
+
 }

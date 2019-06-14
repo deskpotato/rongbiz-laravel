@@ -95,7 +95,12 @@ class ArticlesController extends Controller
         $grid->hits('浏览量');
         $grid->author('来源');
         $grid->category('所属分类');
-
+        $grid->recommend('新闻页推荐')->display(function($recomend){
+            return $recomend == 1? "<font color='red'>是</font>":'否';
+        });
+        $grid->index_recommend('首页推荐')->display(function($recomend){
+            return $recomend == 1? "<font color='red'>是</font>":'否';
+        });
         $grid->created_at('创建时间');
         $grid->updated_at('更新时间');
 
@@ -121,6 +126,8 @@ class ArticlesController extends Controller
         $show->content('内容')->unescape();
         $show->hits('浏览量');
         $show->category('所属分类');
+        $show->as_recommend('新闻页推荐');
+        $show->as_index_recommend('首页推荐');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
 
@@ -143,7 +150,8 @@ class ArticlesController extends Controller
         $form->cropper('image','缩略图');
         $form->number('hits', '浏览量');
         $form->text('author', '来源');
-
+        $form->switch('recommend','新闻页推荐')->default(0);
+        $form->switch('index_recommend','首页推荐')->default(0);
         $default= 1;
         $parameters =  request()->route()->parameters();
         if(!empty($parameters)){

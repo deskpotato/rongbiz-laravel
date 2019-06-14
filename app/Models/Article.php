@@ -28,4 +28,14 @@ class Article extends Model
     {
         return  $this->attributes['category'];
     }
+
+    public function getAsRecommendAttribute()
+    {
+        return     $this->attributes['recommend'] == 1 ? "是":'否';
+    }
+
+    public function getAsIndexRecommendAttribute()
+    {
+        return     $this->attributes['recommend'] == 1 ? "是":'否';
+    }
 }

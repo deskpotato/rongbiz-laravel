@@ -45,17 +45,14 @@ Route::group(['prefix' => 'single'], function () {
     Route::get('industrialBrain','SinglesController@industrialBrain')->name('industrialBrain');
     //天工开物-物联网关
     Route::get('wlGate','SinglesController@wlGate')->name('wlGate');
+    //协作机器人cooperationRobot
+    Route::get('cooperationRobot','SinglesController@cooperationRobot')->name('cooperationRobot');
     //搜救无人机
     Route::get('wuRenJi',function(){
-            return 'wuRenJi';
+        return 'wuRenJi';
     })->name('wuRenJi');
-    //协作机器人cooperationRobot
-    Route::get('cooperationRobot',function(){
-            return 'cooperationRobot';
-    })->name('cooperationRobot');
-
-
 });
 
 Route::get('news','NewsController@index')->name('news.index');
 Route::get('news/{article}','NewsController@show')->name('news.show');
+Route::get('newslist','NewsController@list')->name('news.list');

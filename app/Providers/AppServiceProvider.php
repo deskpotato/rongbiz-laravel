@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use App\Models\Site;
 use App\Models\OtherCompany;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Carbon::setLocale('zh');
         //视图共享数据
         //友情链接
         $links = link::orderby('sort','DESC')->get();

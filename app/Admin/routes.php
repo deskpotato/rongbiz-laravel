@@ -28,6 +28,9 @@ Route::group([
      $router->resource('otherCompanys',OtherCompanysController::class);
     //新闻管理
     $router->resource('articles',ArticlesController::class);
+    //热门搜索词管理
+    $router->resource('hotwords',HotwordsController::class);
+
 
 
 

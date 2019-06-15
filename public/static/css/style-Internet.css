@@ -229,21 +229,22 @@ transition: all 0.5s;
     left: -120px;
     right: auto;
 }
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+.container .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
 	    right: -120px
 }
-.swiper-button-next, .swiper-button-prev{
+.container .swiper-button-next,.container .swiper-button-prev{
 	top: 70%;
 }
-.swiper-button-next{
+.container .swiper-button-next{
 	background: url(../images/InternetThings/next.png) no-repeat;
 	width:80px;
     height: 100px;
 }
-.swiper-button-prev{
+.container .swiper-button-prev{
 	background: url(../images/InternetThings/pre.png) no-repeat;
 	width:80px;
     height: 100px;
+	left:-120px;
 }
 @media only screen and (max-width:768px ) {
 .f16{

@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="slide-text-box">
-                            <span class="c6 f16">2018.06.26</span>
+                            <span class="c6 f16">{{ $item->created_at->toDateString() }}</span>
                             <p class="c3 f16 mt20">
                                     {{ Str::limit($item->description,100,'...') }}
                             </p>
